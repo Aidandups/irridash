@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irrigation Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Irrigation System Dashboard</h1>
+        
+        <div class="input-section">
+            <label for="dripperIn">Dripper In (liters):</label>
+            <input type="number" id="dripperIn" placeholder="Enter Dripper In value">
+            
+            <label for="drainOut">Drain Out (liters):</label>
+            <input type="number" id="drainOut" placeholder="Enter Drain Out value">
+        </div>
+
+        <div class="results">
+            <h2>Runoff Results</h2>
+            <p>Overall Runoff Percentage: <span id="runoffPercentage">0%</span></p>
+            <p>Incremental Runoff Percentage: <span id="incrementalRunoff">0%</span></p>
+        </div>
+
+        <div class="environment">
+            <h2>Environmental Conditions</h2>
+            <p>Temperature: <span id="temperature">--</span>°C</p>
+            <p>Relative Humidity: <span id="humidity">--</span>%</p>
+            <p>Temperature Deficit: <span id="tempDeficit">--</span>°C</p>
+        </div>
+
+        <button onclick="calculateRunoff()">Calculate Runoff</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
